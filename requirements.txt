@@ -26,3 +26,4 @@ Wikipedia-API==0.15.0
 gunicorn
 sympy
 python-dotenv
+Flask-Mail
