@@ -1,0 +1,611 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+}
+
+
+/* BARRA LATERAL */
+
+.barra-lateral {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 270px;
+
+    background: #ffffff;
+    border-right: 1px solid #dddddd;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px;
+
+    z-index: 100;
+    overflow: hidden;
+}
+
+
+/* NOVO CHAT */
+
+.novo-chat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+
+    padding: 13px 15px;
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    color: #222;
+    background: #f1f1f1;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.novo-chat:hover {
+    background: #e5e5e5;
+}
+
+.icone-plus {
+    font-size: 23px;
+    line-height: 1;
+}
+
+
+/* LISTA DE CONVERSAS */
+
+.conversas {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.conversas::-webkit-scrollbar {
+    width: 6px;
+}
+
+.conversas::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 10px;
+}
+
+
+/* CHAT */
+
+.chat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+
+    padding: 11px 12px;
+    margin-bottom: 5px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    color: #333;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+
+    overflow: hidden;
+}
+
+.chat-item:hover {
+    background: #eeeeee;
+}
+
+.chat-atual {
+    background: #e5e5e5;
+    font-weight: bold;
+}
+
+.icone-chat {
+    flex-shrink: 0;
+    font-size: 15px;
+}
+
+.titulo-chat {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* PARTE INFERIOR */
+
+.barra-inferior {
+    border-top: 1px solid #dddddd;
+
+    padding-top: 12px;
+    margin-top: 10px;
+}
+
+.usuario-logado {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: #1b7f3a;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.sair {
+    display: block;
+
+    text-decoration: none;
+
+    color: #777;
+
+    padding: 8px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+.sair:hover {
+    background: #eeeeee;
+    color: #222;
+}
+
+
+/* CONTEUDO */
+
+.conteudo {
+    margin-left: 270px;
+
+    min-height: 100vh;
+
+    padding-bottom: 50px;
+
+    text-align: center;
+}
+
+
+/* BANNER */
+
+.banner {
+    width: 100%;
+    height: 260px;
+
+    background-image: url("/static/imagens/banner.png");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 145px;
+    height: 145px;
+
+    border-radius: 35px;
+
+    object-fit: cover;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* TOPO */
+
+.topo {
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.topo h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.topo p {
+    font-size: 18px;
+    color: #555;
+}
+
+
+/* HISTORICO */
+
+.historico {
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+}
+
+
+/* PERGUNTA */
+
+.pergunta {
+    background-color: #000;
+    color: #fff;
+
+    padding: 15px 20px;
+
+    border-radius: 14px;
+
+    margin: 20px auto 10px auto;
+
+    max-width: 700px;
+
+    text-align: left;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.pergunta h3 {
+    color: #fff;
+
+    margin-top: 0;
+    margin-bottom: 8px;
+
+    font-size: 15px;
+}
+
+.pergunta p {
+    color: #fff;
+
+    margin: 0;
+
+    line-height: 1.5;
+}
+
+
+/* RESPOSTA */
+
+.resposta {
+    background-color: #fff;
+    color: #333;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    margin: 0 auto 20px auto;
+
+    max-width: 700px;
+
+    text-align: left;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    line-height: 1.6;
+}
+
+.resposta h3 {
+    color: #333;
+
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-size: 15px;
+}
+
+.resposta p {
+    color: #333;
+
+    margin: 0;
+}
+
+
+/* FORMULARIO */
+
+.form-pergunta {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 40px auto;
+
+    width: 100%;
+
+    max-width: 800px;
+
+    padding: 0 20px;
+}
+
+.form-pergunta input {
+    flex: 1;
+
+    width: auto;
+
+    padding: 15px 20px;
+
+    border-radius: 25px;
+
+    border: 1px solid #ccc;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.form-pergunta input:focus {
+    border-color: #1b7f3a;
+
+    box-shadow: 0 0 0 2px rgba(27, 127, 58, 0.1);
+}
+
+.form-pergunta button {
+    padding: 15px 25px;
+
+    border-radius: 25px;
+
+    border: none;
+
+    background: #1b7f3a;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.form-pergunta button:hover {
+    background: #145c2a;
+}
+
+
+/* ALUNOS */
+
+.alunos {
+    margin: 60px auto 20px auto;
+
+    width: 90%;
+
+    max-width: 700px;
+
+    color: #666;
+}
+
+.alunos h3 {
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    margin-bottom: 15px;
+
+    color: #555;
+}
+
+.alunos p {
+    font-size: 14px;
+
+    margin: 8px 0;
+
+    color: #666;
+}
+
+
+/* LOGIN */
+
+.login {
+    width: 400px;
+
+    max-width: 90%;
+
+    margin: 80px auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+}
+
+.login h1 {
+    margin-bottom: 10px;
+
+    font-size: 36px;
+}
+
+.login h2 {
+    margin-bottom: 25px;
+
+    font-size: 20px;
+
+    font-weight: normal;
+
+    color: #555;
+}
+
+.login form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.login input {
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ccc;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.login input:focus {
+    border-color: #1b7f3a;
+}
+
+.login button {
+    width: 100%;
+
+    padding: 14px;
+
+    margin: 0;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #1b7f3a;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.login button:hover {
+    background: #145c2a;
+}
+
+
+/* GOOGLE */
+
+.ou {
+    margin: 20px 0;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+.google-login {
+    display: block;
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 10px;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #333;
+
+    text-decoration: none;
+
+    border: 1px solid #ccc;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.google-login:hover {
+    background: #f2f2f2;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .barra-lateral {
+        width: 220px;
+    }
+
+    .conteudo {
+        margin-left: 220px;
+    }
+
+    .banner {
+        height: 200px;
+    }
+
+    .logo {
+        width: 110px;
+        height: 110px;
+    }
+
+    .topo h1 {
+        font-size: 30px;
+    }
+
+    .topo p {
+        font-size: 15px;
+    }
+
+    .form-pergunta {
+        flex-direction: column;
+    }
+
+    .form-pergunta input {
+        width: 100%;
+    }
+
+    .form-pergunta button {
+        width: 100%;
+    }
+
+    .login {
+        width: 90%;
+
+        margin: 40px auto;
+
+        padding: 25px;
+    }
+}

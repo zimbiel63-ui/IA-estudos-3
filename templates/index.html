@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Estuda IA</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- BARRA LATERAL -->
+
+    <aside class="barra-lateral">
+
+
+        <!-- NOVO CHAT -->
+
+        <a
+            href="{{ url_for('novo_chat') }}"
+            class="novo-chat"
+        >
+
+            <span class="icone-plus">＋</span>
+
+            <span>Novo chat</span>
+
+        </a>
+
+
+        <!-- LISTA DE CONVERSAS -->
+
+        <div class="conversas">
+
+            {% for chat in chats %}
+
+                <a
+                    href="{{ url_for('abrir_chat', chat_id=chat.id) }}"
+                    class="chat-item {% if chat.id == chat_atual.id %}chat-atual{% endif %}"
+                >
+
+                    <span class="icone-chat">💬</span>
+
+                    <span class="titulo-chat">
+                        {{ chat.titulo }}
+                    </span>
+
+                </a>
+
+            {% endfor %}
+
+        </div>
+
+
+        <!-- PARTE INFERIOR DA BARRA -->
+
+        <div class="barra-inferior">
+
+
+            <div class="usuario-logado">
+
+                <div class="avatar">
+
+                    {{ session.get("usuario_nome", "U")[0] | upper }}
+
+                </div>
+
+                <span>
+
+                    {{ session.get("usuario_nome", "Usuário") }}
+
+                </span>
+
+            </div>
+
+
+            <a
+                href="{{ url_for('logout') }}"
+                class="sair"
+            >
+
+                Sair
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ÁREA PRINCIPAL -->
+
+    <main class="conteudo">
+
+
+        <!-- BANNER / LOGO -->
+
+        <div class="banner">
+
+            <img
+                class="logo"
+                src="{{ url_for('static', filename='imagens/logo.png') }}"
+                alt="Logo Estuda IA"
+            >
+
+        </div>
+
+
+        <!-- TOPO -->
+
+        <div class="topo">
+
+            <h1>Estuda IA</h1>
+
+            <p>
+                Seu professor inteligente para aprender passo a passo.
+            </p>
+
+        </div>
+
+
+        <!-- CONVERSA -->
+
+        <div class="historico">
+
+            {% for conversa in historico %}
+
+
+                <!-- PERGUNTA -->
+
+                <div class="pergunta">
+
+                    <h3>
+                        Você:
+                    </h3>
+
+                    <p>
+                        {{ conversa.pergunta }}
+                    </p>
+
+                </div>
+
+
+                <!-- RESPOSTA -->
+
+                <div class="resposta">
+
+                    <h3>
+                        Estuda IA:
+                    </h3>
+
+                    <p style="white-space: pre-line;">
+                        {{ conversa.resposta
+                            | replace("**", "")
+                            | replace("\\*", "")
+                        }}
+                    </p>
+
+                </div>
+
+
+            {% endfor %}
+
+        </div>
+
+
+        <!-- CAMPO DE PERGUNTA -->
+
+        <form
+            action="{{ url_for('perguntar') }}"
+            method="POST"
+            class="form-pergunta"
+        >
+
+            <input
+                type="text"
+                name="pergunta"
+                placeholder="Digite sua dúvida"
+                required
+                autocomplete="off"
+            >
+
+            <button type="submit">
+                Perguntar
+            </button>
+
+        </form>
+
+
+        <!-- ALUNOS -->
+
+        <div class="alunos">
+
+            <h3>
+                ELABORADO PELOS SEGUINTES ALUNOS DA EMEF SOLANO TRINDADE
+            </h3>
+
+            <p>
+                Gabriel Lima Soares
+            </p>
+
+            <p>
+                Diogo Mendes da Silva
+            </p>
+
+            <p>
+                Ryan Ferreira da Silva
+            </p>
+
+            <p>
+                Josué de Sousa Veloso
+            </p>
+
+            <p>
+                Davi Ribeiro da Silva
+            </p>
+
+        </div>
+
+
+    </main>
+
+
+</body>
+
+</html>
