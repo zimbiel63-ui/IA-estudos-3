@@ -1,0 +1,24 @@
+Em matemática, uma equação quadrática ou equação do segundo grau é uma equação polinomial de grau dois. A forma geral deste tipo de equação é: y := f(x) = 
+  
+    
+      
+        a
+        
+          x
+          
+            2
+          
+        
+        +
+        b
+        x
+        +
+        c
+        =
+        0
+      
+    
+    {\displaystyle ax^{2}+bx+c=0}
+  
+, em que x é uma variável, sendo a, b e c constantes, com a ≠ 0 (caso contrário, a equação torna-se linear (equação de primeiro grau)). As constantes a, b e c, são chamadas respectivamente de coeficiente quadrático, coeficiente linear e coeficiente constante ou termo livre.
+A variável x representa um valor a ser determinado, e também é chamada de incógnita. O termo "quadrático" vem de quadratus, que em latim significa quadrado. Equações quadráticas podem ser resolvidas por meio da fatoração, do completamento de quadrados, do uso de gráficos, da aplicação do método de Newton ou do uso de uma fórmula. Um uso frequente das equações do segundo grau é em modelos simples de cálculo das trajetórias de projéteis em movimento.

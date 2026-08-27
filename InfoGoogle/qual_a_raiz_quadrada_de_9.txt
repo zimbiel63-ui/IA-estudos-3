@@ -1,0 +1,80 @@
+Em matemática, a raiz quadrada de 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ é um número positivo 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ que, multiplicado por si próprio, iguala-se a 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+. Todo número real não negativo possui uma única raiz quadrada não negativa, chamada de raiz quadrada principal, a qual é denotada pelo símbolo 
+  
+    
+      
+        
+          
+            x
+            
+              2
+            
+          
+        
+      
+    
+    {\displaystyle {\sqrt[{2}]{x}}}
+  
+. Por exemplo, 3 é a raiz quadrada de 9, ou seja, 
+  
+    
+      
+        
+          
+            9
+            
+              2
+            
+          
+        
+        =
+        3
+      
+    
+    {\displaystyle {\sqrt[{2}]{9}}=3}
+  
+, pois 
+  
+    
+      
+        3
+        ×
+        3
+        =
+        
+          3
+          
+            2
+          
+        
+        =
+        9
+      
+    
+    {

@@ -1,0 +1,2 @@
+A álgebra é um ramo da matemática que lida com sistemas abstratos, conhecidos como estruturas algébricas, e com a manipulação de expressões dentro desses sistemas. É uma generalização da aritmética que introduz variáveis e operações algébricas além das operações aritméticas padrão, como a adição e a multiplicação.
+A álgebra elementar é a principal forma de álgebra ensinada nas escolas. Ela examina sentenças matemáticas usando variáveis para valores não especificados e procura determinar para qua

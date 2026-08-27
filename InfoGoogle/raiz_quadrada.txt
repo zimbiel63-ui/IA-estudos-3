@@ -1,0 +1,36 @@
+Em matemática, a raiz quadrada de 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ é um número positivo 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ que, multiplicado por si próprio, iguala-se a 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+. Todo número real não negativo possui uma única raiz quadrada não negativa, chamada de raiz quadrada principal, a qual é denotada pelo símbolo 
+  
+    
+      
+        
+          
+            x
+            
+ 
