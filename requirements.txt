@@ -27,3 +27,4 @@ gunicorn
 sympy
 python-dotenv
 Flask-Mail
+Authlib
