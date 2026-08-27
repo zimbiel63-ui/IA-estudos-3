@@ -1249,10 +1249,11 @@ def login_google():
         _external=True
     )
 
+    print("REDIRECT URI:", redirect_uri)
+
     return google.authorize_redirect(
         redirect_uri
     )
-
 
 # ==========================================
 # RETORNO DO GOOGLE
