@@ -29,3 +29,4 @@ python-dotenv
 Flask-Mail
 Authlib
 email-validator
+google-genai
