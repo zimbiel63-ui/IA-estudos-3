@@ -28,3 +28,4 @@ sympy
 python-dotenv
 Flask-Mail
 Authlib
+email-validator
